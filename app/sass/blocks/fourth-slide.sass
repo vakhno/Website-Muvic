@@ -1,0 +1,111 @@
+
+.elip
+    cursor: pointer    
+.fourth-slide    
+    position: relative
+    &__title
+        margin-bottom: 77px
+    img
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-right: -50%
+        transform: translate(-50%, -50%)
+    &__characteristics
+        height: 100%
+    &__characteristic-blocks
+        height: 100%
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr 1fr
+    
+.characteristic-block
+    position: relative
+    display: flex
+    &:nth-of-type(even)
+        flex-direction: row-reverse
+        stroke-dasharray: 0
+    &:not(:first-of-type)
+        .characteristic-block__description
+            opacity: 0
+        .characteristic-block__line
+            stroke-dashoffset: 350
+        .characteristic-block__line
+    &:first-of-type
+        .characteristic-block__line
+            right: -111px
+            top: 11px
+        .characteristic-block__label
+            top: 115px
+            left: 108px
+    &:nth-of-type(2)
+        .characteristic-block__line
+            top: 11px
+            right: 21px
+        .characteristic-block__label
+            top: 106px
+            right: 267px
+    &:nth-of-type(3)
+        .characteristic-block__line
+            top: -63px
+            left: -67px
+        .characteristic-block__label
+            top: -76px
+            left: 270px
+    &:last-of-type
+        .characteristic-block__line
+            top: -71px
+            right: 21px
+        .characteristic-block__label
+            top: -82px
+            right: 134px
+    &__line
+        stroke-dasharray: 350
+        position: absolute
+    &__description
+        transition: 0.5s
+    &__title
+        margin-bottom: 10px
+    &__text
+        max-width: 280px
+    &__label
+        position: absolute
+        cursor: pointer
+    &__label > input[type=checkbox] 
+        display: none
+
+
+@keyframes ani
+    100%
+        stroke-dashoffset: 0
+    0%
+        stroke-dashoffset: 350
+
+
+@keyframes ani-reverse
+    0%
+        stroke-dashoffset: 0
+    100%
+        stroke-dashoffset: 350
+
+
+
+.characteristic-block__pointer
+    position: relative
+    // &:first-of-type
+    //     .characteristic-block__line
+    //         right: -101px
+    //         top: 11px
+    //     .characteristic-block__label
+    //         top: 115px
+    //         left: 98px
+
+    
+// .li
+//     position: relative
+//     svg
+//         right: -101px
+//         top: 11px
+//     label
+//         top: 115px
+//         left: 98px

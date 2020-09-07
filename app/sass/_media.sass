@@ -1,0 +1,256 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+@media only screen and (max-width : 768px)
+	.header
+		top: 0px
+		height: 60px
+		background-color: rgba(#000, 0.3)
+	.container
+		padding: 80px 10px 50px 10px
+	.title-44-white
+		margin-bottom: 20px
+		text-align: center
+	.wrapper
+		overflow: scroll 
+		overflow-x: hidden
+@media only screen and (max-width : 460px)
+	.title-44-white
+		font-size: 28px 
+
+
+@media only screen and (max-width : 1180px)
+	.main__slider-wrapper.burger-menu--active
+		.main__slider-paggination
+			left: 50%
+	.header__burger-menu
+		display: block
+	.main__slider-paggination
+		width: 100%
+		text-align: center
+		position: fixed
+		flex-direction: column
+		top: 50%
+		transform: translate(-50%, -50%)
+		.main__slider-bullet
+			width: 100%
+			margin-right: 0
+			padding: 20px 0
+			&:first-of-type
+				display: none
+	.header__buy-btn
+		margin: 0 10px
+	.header__phone-number	
+		position: fixed
+		bottom: 40px
+		left: -100%
+		transform: translate(-50%)
+	
+@media only screen and (max-width : 540px)
+	.first-slide__losung
+		display: none
+	.first-slide__mavic-image
+		width: auto
+	.first-slide__mavic-info
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	.first-slide__mavic-description
+		margin-bottom: 0
+
+@media only screen and (max-width : 1250px)
+	.advantage__title
+		font-size: 34px
+	.advantage__image-block
+		align-self: center
+	.advantage__text
+		padding-left: 0
+	.advantage__image-description
+		font-size: 20px
+		position: relative
+		transform: translateX(0)
+		text-align: center
+		margin: 0 auto 40px auto
+	.advantage__image
+		width: 100%
+		min-width: 300px
+		img
+			width: 100%
+
+@media only screen and (max-width : 768px)
+	.advantage__slider-item
+		flex-direction: column
+	.advantage__info-block
+		margin: 0 0 40px 0
+		text-align: center
+		width: 100%
+		min-width: 100px
+		max-width: none
+	.advantage__title
+		font-size: 28px
+	.advantage__text
+		margin: 0 auto
+		max-width: 600px
+		text-align: center
+		p
+			&:not(:last-of-type)
+				margin-bottom: 10px
+	.advantage__image-description
+		display: none
+	.advantage__image
+		max-width: 350px
+		min-width: 200px
+		&::before
+			left: 0
+			bottom: 15px
+	.advantage__slider-btns
+		right: auto
+		left: 50%
+		transform: translate(-50%, 0)
+
+@media only screen and (max-width : 1240px)
+	.third-slide__advantages-blocks
+		justify-items: center
+		row-gap: 50px
+	.third-slide__advantage-block
+		flex-direction: column
+		&:first-child
+			&::before
+				background-image: none
+		&:nth-child(2)
+			transform: translateY(0px)
+			&::after
+				background-image: none
+		&:nth-child(3)
+			transform: translate(0px, 0px)
+			&::before
+				background-image: none
+		&:nth-child(4)
+			transform: translate(0px, 0px)
+	.advantage-block__title
+		max-width: 100%		
+	.advantage-block__number
+		display: none
+	.advantage-block__image
+		margin-right: 0
+		margin-bottom: 10px
+		align-self: center
+	.advantage-block__description
+		text-align: center
+
+@media only screen and (max-width : 768px)
+	.third-slide__advantages-blocks
+		grid-template-columns: 1fr
+	.third-slide__advantage-block
+		flex-direction: column
+	.advantage-block__description
+		min-width: 210px
+	.advantage-block__image
+		max-width: 200px
+
+
+
+@media only screen and (max-width : 1140px)
+	.characteristic-block__description
+		opacity: 1 !important
+		display: block
+	.characteristic-block__label
+		display: none
+	.characteristic-block__line
+		display: none
+
+@media only screen and (max-width : 960px)
+	.fourth-slide	
+		img
+			width: 50%
+
+@media only screen and (max-width : 768px)
+	.fourth-slide	
+		img
+			transform: translate(0%,-50%)
+			width: 100%
+	.fourth-slide__characteristic-blocks
+		grid-template-columns: 1fr !important
+		grid-template-rows: inherit
+		row-gap: 20px
+		height: auto
+	.fourth-slide__characteristics
+		display: flex
+		align-items: flex-start
+		flex-direction: row-reverse
+	.characteristic-block__pointer
+		display: none
+	.characteristic-block
+		opacity: 1
+		flex-direction: inherit
+		max-width: 350px
+		width: 100%
+	.characteristic-block__text
+		max-width: 100%
+
+@media only screen and (max-width : 560px)
+	.fourth-slide__characteristic-blocks
+		justify-items: center
+	.characteristic-block__title
+		text-align: center
+	.characteristic-block__text
+		text-align: center
+	.fourth-slide	
+		img
+			transform: translate(-50%,-50%)
+			width: 100%
+
+@media only screen and (max-width : 768px)
+	.fifth-slide__dron-image
+		display: none
+@media only screen and (max-width : 460px)
+	.accordion__title
+		font-size: 16px
+
+@media only screen and (max-width : 860px)	
+	.info-block
+		flex-wrap: wrap-reverse
+		padding-left: 0
+		&__contacts
+			order: 2
+			width: 100%
+			display: flex
+			justify-content: space-between
+			flex-direction: row
+			margin-right: 0
+		&__contact
+			text-align: center
+		&__user-form
+			order: 3
+			flex: 1
+			max-width: inherit 
+			margin-bottom: 30px
+			margin-right: 0
+		&__social
+			order: 1
+			width: 100%
+			flex-direction: row
+			justify-content: center
+			margin-bottom: 20px
+		.info-block__link-media
+			&:not(:last-of-type)
+				margin-bottom: 0
+				margin-right: 30px
+	.contact__mail
+		width: auto
+@media only screen and (max-width : 660px)
+	.info-block
+		&__contacts
+			flex-direction: column
+			margin-bottom: 30px
+	.user-form
+		&__title
+			text-align: center
+		&__subtitle
+			text-align: center
+		&__form
+			grid-template-columns: 1fr !important
+		&__description-area
+			grid-column: 1/1
