@@ -13,12 +13,15 @@
 		margin-bottom: 20px
 		text-align: center
 	.wrapper
-		overflow: scroll 
+		overflow-y: auto 
 		overflow-x: hidden
 @media only screen and (max-width : 460px)
 	.title-44-white
 		font-size: 28px 
 
+@media only screen and (max-height : 440px)
+	.main__slider-paggination .main__slider-bullet
+		padding: 10px 0 !important
 
 @media only screen and (max-width : 1180px)
 	.main__slider-wrapper.burger-menu--active
@@ -119,12 +122,13 @@
 	.advantage__image
 		display: none
 
-@media only screen and (max-width : 1240px)
+@media only screen and (max-width : 1240px),screen and (max-height : 630px)
 	.third-slide__advantages-blocks
 		justify-items: center
 		row-gap: 50px
 	.third-slide__advantage-block
-		flex-direction: column
+		align-items: flex-start
+		flex-direction: row
 		&:first-child
 			&::before
 				background-image: none
@@ -143,13 +147,13 @@
 	.advantage-block__number
 		display: none
 	.advantage-block__image
-		margin-right: 0
+		margin-right: 20px
 		margin-bottom: 10px
 		align-self: center
 	.advantage-block__description
-		text-align: center
+		min-width: 220px
 
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 960px),screen and (max-height : 550px)
 	.third-slide__advantages-blocks
 		grid-template-columns: 1fr
 	.third-slide__advantage-block
@@ -161,7 +165,7 @@
 
 
 
-@media only screen and (max-width : 1140px)
+@media only screen and (max-width : 1140px), screen and (max-height : 530px)
 	.characteristic-block__description
 		opacity: 1 !important
 		display: block
@@ -175,11 +179,13 @@
 		img
 			width: 50%
 
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 768px), screen and (max-height : 530px)
 	.fourth-slide	
 		img
 			transform: translate(0%,-50%)
 			width: 100%
+		&__content
+			overflow-y: visible !important
 	.fourth-slide__characteristic-blocks
 		grid-template-columns: 1fr !important
 		grid-template-rows: inherit
@@ -210,14 +216,17 @@
 		img
 			display: none
 
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 768px), screen and (max-height : 625px)
 	.fifth-slide__dron-image
 		display: none
+	.fifth-slide__accordion
+		width: 100%
+		max-width: inherit
 @media only screen and (max-width : 460px)
 	.accordion__title
 		font-size: 16px
 
-@media only screen and (max-width : 860px)	
+@media only screen and (max-width : 860px), screen and (max-height : 540px)
 	.info-block
 		flex-wrap: wrap-reverse
 		padding-left: 0
@@ -248,7 +257,7 @@
 				margin-right: 30px
 	.contact__mail
 		width: auto
-@media only screen and (max-width : 660px)
+@media only screen and (max-width : 660px), screen and (max-height : 540px)
 	.info-block
 		&__contacts
 			flex-direction: column
@@ -264,4 +273,6 @@
 			grid-column: 1/1
 		&__button
 			width: 100%
-			// height: 
+	.contact__mail
+		width: fit-content
+		margin: 0 auto

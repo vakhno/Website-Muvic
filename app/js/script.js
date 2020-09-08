@@ -109,3 +109,43 @@ window.addEventListener('resize', elem => {
 })
 
 
+function deleteOutline(...args) {
+    args.map(elem => {
+        elem.addEventListener('click', (item) => {
+            console.log(item.target.style.outline = '')
+        })
+    })
+}
+
+function checkText(value) {
+    return (value !== '') ? true : false;
+};
+
+function checkMail(value) {
+    return (value != '' && value.includes('@')) ? true : false;
+};
+
+document.querySelector('.error').addEventListener('click', (e) => {
+    e.target.style.display = "none";
+    document.querySelector('.user-form__name-input').value = '';
+    document.querySelector('.user-form__mail-input').value = '';
+    document.querySelector('.user-form__description-area').value = '';
+})
+
+document.querySelector('.user-form__button').addEventListener('click', (e) => {
+    e.preventDefault();
+    let name = document.querySelector('.user-form__name-input');
+    let mail = document.querySelector('.user-form__mail-input');
+    let description = document.querySelector('.user-form__description-area');
+    let bg = document.querySelector('.error');
+
+    deleteOutline(name, mail, description);
+
+    if (checkText(name.value) && checkMail(mail.value) && checkText(description.value)) {
+        bg.style.display = 'block'
+    } else {
+        !checkText(name.value) ? name.style.outline = '2px solid red' : name.style.outline = '';
+        !checkText(description.value) ? description.style.outline = '2px solid red' : description.style.outline = '';
+        !checkMail(mail.value) ? mail.style.outline = '2px solid red' : mail.style.outline = '';
+    }
+})
