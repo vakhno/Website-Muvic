@@ -2,7 +2,6 @@
 .elip
     cursor: pointer    
 .fourth-slide    
-    position: absolute
     &__content
         overflow: hidden !important
     &__title
@@ -21,6 +20,9 @@
         grid-template-columns: 1fr 1fr
         grid-template-rows: 1fr 1fr
     
+.characteristic-block__pointer
+    position: relative
+
 .characteristic-block
     position: relative
     display: flex
@@ -76,38 +78,14 @@
     &__label > input[type=checkbox] 
         display: none
 
-
 @keyframes ani
     100%
         stroke-dashoffset: 0
     0%
         stroke-dashoffset: 350
 
-
 @keyframes ani-reverse
     0%
         stroke-dashoffset: 0
     100%
         stroke-dashoffset: 350
-
-
-
-.characteristic-block__pointer
-    position: relative
-    // &:first-of-type
-    //     .characteristic-block__line
-    //         right: -101px
-    //         top: 11px
-    //     .characteristic-block__label
-    //         top: 115px
-    //         left: 98px
-
-    
-// .li
-//     position: relative
-//     svg
-//         right: -101px
-//         top: 11px
-//     label
-//         top: 115px
-//         left: 98px
