@@ -3,6 +3,8 @@ let bulletsArray = Array.from(document.querySelectorAll('.main__slider-item')).m
 const swiperMain = new Swiper(`.main__slider`, {
     direction: 'vertical',
     slidesPerView: 1,
+    simulateTouch: false,
+    mousewheel: true,
     slideClass: `main__slider-item`,
     slideActiveClass: 'main__slider-item--active',
     wrapperClass: `main__slider-wrapper`,
@@ -20,6 +22,7 @@ const swiperMain = new Swiper(`.main__slider`, {
     },
     navigation: {
         nextEl: '.main__next-slide',
+        prevEl: '.main__prev-slide',
     },
 });
 
