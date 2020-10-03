@@ -1,0 +1,44 @@
+.sqaure-btn
+	cursor: pointer
+	outline: none
+	position: relative
+	background-color: #fff
+	&__arrow
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-right: -50%
+		transform: translate(-50%, -50%)
+
+.accordion-btn
+	cursor: pointer
+	position: relative
+	background-color: transparent
+	&__arrow
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-right: -50%
+		transform: translate(-50%, -50%)
+
+.transparent-button
+	background-color: transparent
+	font-family: 'Ubuntu', sans-serif
+	text-transform: uppercase
+	cursor: pointer
+	outline: none
+	border: 1px solid white
+	border-radius: 3px
+	width: 115px
+	height: 30px
+	color: #fff
+	font-size: 15px
+	font-weight: 500
+	&:hover
+		transition: 0.3s
+		background-color: #fff
+		color: #000
+		&:active
+			transition: 0s
+			background-color: darken(#fff, 40%)
+			border-color: darken(#fff, 40%)

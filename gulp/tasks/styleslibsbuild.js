@@ -30,7 +30,8 @@ const path = {
 };
 
 const libsScripts = [
-	'node_modules/swiper/swiper-bundle.min.css',
+	'node_modules/swiper/swiper-bundle.css',
+	'node_modules/simplebar/dist/simplebar.min.css'
 ];
 
 module.exports = function styleslibsbuild(cb) {
