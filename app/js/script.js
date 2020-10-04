@@ -21,7 +21,7 @@ const swiperMain = new Swiper(`.main__slider`, {
 		el: `.main__slider-paggination`,
 		type: `bullets`,
 		clickable: true,
-		renderBullet: function (index, className) {
+		renderBullet: function (index) {
 			return `<div class='main__slider-bullet'>${bulletsArray[index]}</div>`;
 		},
 	},
@@ -51,7 +51,7 @@ function showCharacteristic(item) {
 	// определяем линия характеристики, которая идет от точки к описанию
 	const line = item.target.parentNode.parentNode.children[0];
 	// определяем ее длину
-	const lineLength = line.width.animVal[`value`];
+	const lineLength = line.width.animVal.value;
 	// описание характеристики
 	const description = item.target.parentNode.parentNode.parentNode.children[0];
 	// проверка активна ли характеристика(если еще не отображается)
@@ -90,7 +90,7 @@ function showAccordionItem(item) {
 			elem.style.maxHeight = null;
 		});
 		// отображение текста
-		text.style.maxHeight = text.scrollHeight + "px";
+		text.style.maxHeight = text.scrollHeight + `px`;
 		text.previousElementSibling.classList.add(`active`);
 	}
 }
@@ -129,17 +129,17 @@ window.addEventListener(`resize`, () => {
 
 // проверяем текстовое поле
 function checkText(value) {
-	return (value !== ``) ? true : false;
+	return value !== ``;
 };
 
 // проверяем поле с почтой
 function checkMail(value) {
-	return (value != `` && value.includes(`@`)) ? true : false;
+	return value !== `` && value.includes(`@`);
 };
 
 // при клике на область всплывающего окна, скрываем его, а также текст в полях ввода
 document.querySelector(`.error`).addEventListener(`click`, (e) => {
-	e.target.style.display = "none";
+	e.target.style.display = `none`;
 	document.querySelector(`.user-form__name-input`).value = ``;
 	document.querySelector(`.user-form__mail-input`).value = ``;
 	document.querySelector(`.user-form__description-area`).value = ``;
@@ -160,7 +160,7 @@ document.querySelector(`.user-form__button`).addEventListener(`click`, (e) => {
 	// проверка полей
 	if (checkText(name.value) && checkMail(mail.value) && checkText(description.value)) {
 		bg.style.display = `block`;
-		Array.from(e.target.parentNode.children).map(elem => { elem.style.outline = `none` })
+		Array.from(e.target.parentNode.children).map(elem => { elem.style.outline = `none`; });
 	} else {
 		!checkText(name.value) ? name.style.outline = `2px solid red` : name.style.outline = ``;
 		!checkText(description.value) ? description.style.outline = `2px solid red` : description.style.outline = ``;
